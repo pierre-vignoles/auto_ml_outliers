@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+
+
+  <body>
+      <img src="{{ url_for('static', filename='logo_spyra.png') }}" width=15% height=15% align="center" class="image_fraude">
+      <h2>Diagnostic</h2>
+
+      <label>
+        <textarea name="text_box" class="text_box" id="text_box"> 
+          
+          {% for message in messages %}
+            {{ message }}
+          {% endfor %}
+          
+        </textarea>
+      </label>
+      <form action = "http://localhost:5000/page_manuelle" method = "POST" 
+          enctype = "multipart/form-data">
+          <div class="form_bottom">
+            <button type = "submit" name="return" value="yes" class="button_submit">return</button>
+          </div>
+
+          <div class="title_vertical_menu">
+            <p>Tabs</p>
+          </div>
+          <div class="vertical_menu">
+            <input type="submit" name="return" value="Dataset">
+            <input type="submit" name="return" value="Type of dataset">
+            <input type="submit" name="return" value="Feature to predict">
+            <input type="submit" name="return" value="Data prep">
+            <input class="active" type="submit" name="return" value="Diagnostic">
+          </div>
+          
+      </form>
+
+      <a href="{{ url_for('home') }}"> <button class="home"><i class="fa fa-home"></i> Home</button></a>
+
+
+  </body>
+</html>

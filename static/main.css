@@ -1,0 +1,257 @@
+html { 
+  background: url(background1.png) no-repeat center fixed; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; /* version standardisée */
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position:relative;
+  font-size: 100%;
+}
+
+.home{
+	position: absolute;
+	top:2%;
+	cursor: pointer;
+	font-size: 2em;
+	color: black;
+	font-family: 'Verdana';
+	border: none;
+    background-color: transparent;
+    outline:none;
+}
+
+.home:hover{
+	background-color: #7e7e7e;
+}
+
+.image_fraude{
+	position:absolute;
+	top:5%;
+	left: 0; 
+  	right: 0; 
+  	margin-left: auto; 
+  	margin-right: auto; 
+
+}
+
+
+h1 {
+  font-size: 4em;
+  font-family: 'Verdana';
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 100px;
+} 
+
+
+h2 {
+  font-size: 2em;
+  font-family: 'Verdana';
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  position:absolute;
+  top:25%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+} 
+
+.decalage{
+  font-size: 2em;
+  font-family: 'Verdana';
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  position:absolute;
+  top:25%;
+  left: 10%; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+
+.title_vertical_menu p{
+	position:absolute;
+	top: 6%;
+	font-size: 2em;
+	font-family: 'Verdana';
+}
+
+.vertical_menu {
+   height: 30%;
+   width: 10%;
+   overflow-y: auto;
+   position:absolute;
+   top: 20%;
+   border-radius: 5px;
+  }
+
+
+.vertical_menu input {
+  color: black; 
+  background-color: whitesmoke;
+  display: block; /* vertical */
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Verdana';
+  padding: 5px 5px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  border: none;
+  width: 100%;
+}
+
+.vertical_menu input:hover {
+	background-color: #c5c5c5; /* couleur quand on passe la souris dessus */
+	color: black;
+  }
+  
+.vertical_menu input.active {
+	background-color: rgb(184, 147, 27); /* couleur pour l'onglet actif */
+	color: white;
+  }
+
+  .form_bottom {
+  display: block;
+  text-align: center;
+  position: absolute;
+  bottom: 3%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+
+}
+
+
+.button_submit{
+  background-color: whitesmoke;
+  border: 2px solid #c5c5c5;
+  border-radius: 12px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  margin: 4px 2px;
+  color: black;
+  font-size: 12px;
+  font-family: 'Verdana';
+  font-weight: bold;
+  line-height: 1.4;
+  padding: 10px 15px;
+  width: 120px
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+ }
+
+
+ .button_submit:hover {
+	 background-color: #c5c5c5;
+	 color: black;
+}
+
+.plot_pca{
+	position: absolute;
+  	bottom: 10%;
+  	left: 0; 
+  	right: 0; 
+  	margin-left: auto; 
+	margin-right: auto; 
+	width:70%;
+	height:50%;
+}
+
+.text_box{
+	position: absolute;
+	left: 0; 
+	right: 0; 
+	margin-left: auto; 
+	margin-right: auto; 
+	top:38%;
+	width:80%;
+	height:48%;
+	resize: none;
+	border: 2px solid #ccc;
+  	border-radius: 4px;
+	background-color: #111010;
+	color: rgb(228, 162, 19);
+  	font-family: 'Verdana';
+}
+
+.file_upload
+{
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+}
+.file_upload+span
+{
+	background-color: whitesmoke;
+	border: 2px solid #c5c5c5;
+	border-radius: 12px;
+	font-family: 'Verdana';
+	font-size: 12px;
+	padding: 10px 15px;
+	margin: 4px 2px;
+	position: relative;
+	width: 120px;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	font-weight: bold;
+    line-height: 1.4;
+}
+
+.file_upload+span:hover {
+	background-color: #c5c5c5;
+	color: black;
+}
+
+.file_upload+span:after
+{
+
+	content: attr(data-file);
+	display: block;
+	font-size: 12px;
+	font-style: italic;
+	font-family: 'Verdana';
+	margin-top: 15px;
+	position: absolute;
+	width: 100px;
+}
+
+
+.simple_select
+{
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('down.png');
+	background-position: right center;
+	background-repeat: no-repeat;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+	font-size: 16px;
+	padding: 5px 25px 5px 5px;
+}
+.simple_select::-ms-expand
+{
+	display: none;
+}
+.simple_select:focus
+{
+	box-shadow: 0 0 6px 0 #0070b0;
+	outline: none;
+}
+
+

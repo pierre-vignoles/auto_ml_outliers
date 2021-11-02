@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+  <script type ="text/javascript" src="{{url_for('static', filename='js_test.js')}}"></script>
+
+</head>
+
+  
+<body>
+    <img src="{{ url_for('static', filename='logo_spyra.png') }}" width=15% height=15% align="center" class="image_fraude">
+    <h2>Welcome to this Auto-ML tools.</h2>
+
+    <form class="form_bottom" action = "http://localhost:5000/uploader" method = "POST" 
+         enctype = "multipart/form-data">
+          <label>
+          <input type='file' name = "file" class="file_upload">
+          <span data-file="">Choose a file...</span>
+          
+          <input type = "submit" class = "button_submit", value="Upload"/>
+         </label>
+    </form>
+</body>
+</html>

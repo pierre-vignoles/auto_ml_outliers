@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+  
+<body>
+    <<img src="{{ url_for('static', filename='logo_spyra.png') }}" width=15% height=15% align="center" class="image_fraude">
+    <h2>Supervised learning<br> Choice of the feature to predict</h2>
+
+    
+    <form action = "http://localhost:5000/Page3" method = "POST" 
+        enctype = "multipart/form-data">
+        <div class="form_bottom">
+          <label>
+            <select name="feature_target" class="simple_select">
+
+              {% for column in column_name %}
+              <option value="{{ column }}">{{ column }}</option>
+              {% endfor %}  
+            
+            </select>
+          </label>
+          <input type = "submit" name="tabs" value="Submit" class="button_submit"/>
+        </div>
+
+        <div class="title_vertical_menu">
+            <p>Tabs</p>
+        </div>
+        <div class="vertical_menu">
+          <input type="submit" name="tabs" value="Dataset">
+          <input type="submit" name="tabs" value="Type of dataset">
+          <input class="active" type="submit" name="tabs" value="Feature to predict">
+        </div>
+
+      </form>
+
+
+
+      <a href="{{ url_for('home') }}"> <button class="home"><i class="fa fa-home"></i>Home</button></a>
+      
+
+
+  </body>
+</html>
