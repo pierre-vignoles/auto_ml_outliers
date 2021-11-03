@@ -102,7 +102,7 @@ def page4():
     if request.method == 'POST':
 
         global dataset_cleaned
-        if request.form['Processing'] == "automatique" and learning == "supervised":
+        if request.form['Processing'] == "automatic" and learning == "supervised":
             dataset_cleaned = cleanDataset(dataframe, feature_target, manual=False, supervised=True)
 
             X_train, X_test, Y_train, Y_test = separation(dataset_cleaned, feature_target)
@@ -134,7 +134,7 @@ def page4():
             return render_template("page_manuelle.html", messages=messages)
 
 
-        elif request.form['Processing'] == "automatique" and learning == "unsupervised":
+        elif request.form['Processing'] == "automatic" and learning == "unsupervised":
             dataset_cleaned = cleanDataset(dataframe, feature_target=None, manual=False, supervised=False)
             return render_template("page5.html", column_number=range(2, len(dataset_cleaned.columns)))
 
