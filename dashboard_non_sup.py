@@ -504,7 +504,7 @@ def dashviznsup(X: np.ndarray, X2: pd.DataFrame, model: List[Union[int, float, L
     def updateoptionsdropdown(value_model):
         return [{'label': i, 'value': i} for i in range(0, model[value_model][0][1])]
 
-    # Update of silhouette_score
+    # on update la valeur de la silhouette_score
     @app.callback(Output('sil_score', 'children'), [Input('model_selector', 'value')])
     def updatesil(value):
         return sil_score(model[value][0][2])
@@ -515,7 +515,7 @@ def dashviznsup(X: np.ndarray, X2: pd.DataFrame, model: List[Union[int, float, L
         return "% of outliers you want : " + str(100 - float(value) * 100) + '%' + " / " + \
                str(function_extreme_number(X2, value))
 
-    # Dropdown and slider
+    # on lie la valeur du dropdown et du slider aux différents graphiques
     @app.callback(Output('graph_outliers', 'figure'), [Input('my_slider', 'value'), Input('model_selector', 'value')])
     def updateanomaly(value_slider, value_model):
         return function_display_outliers(X, model[value_model][int(100 * float(value_slider) - 90)][4],
