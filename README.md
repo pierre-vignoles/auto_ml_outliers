@@ -1,12 +1,12 @@
 ![Logo](https://github.com/pierre-vignoles/auto_ml_outliers/blob/master/static/logo_spyra.png)
 
-This is an Auto-ML tool specialized in detecting of outliers.  
+### Auto-ML tool specialized in detecting of outliers.  
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)  ![badge-automl](https://github.com/pierre-vignoles/auto_ml_outliers/blob/master/img/auto-machine-learning.svg)
 
 
 ## Description
-
+This tool will allow you to save a considerable amount of time. It includes automatic data preparation, training of 10 models of ML (supervised and unsupervised), and a visualization to help you to choose and set up a model. All these steps are done specifically for the detection of outliers.
 
 ## Different models
 ### Supervised learning
@@ -37,7 +37,7 @@ Then you need to copy the following link in your Web browser :
 * First, you have to upload your dataset in a CSV format :
 ![Screen2](https://github.com/pierre-vignoles/auto_ml_outliers/blob/master/img/Screen_2.png)
 
-* Then, you have to choose the learning mode. If your dataset contains the feature to predict, click on __supervised__. Otherwise, click on __unsupervised__
+* Then, you have to choose the learning mode. If your dataset contains the feature to predict, click on __supervised__. Otherwise, click on __unsupervised__.
 ![Screen3](https://github.com/pierre-vignoles/auto_ml_outliers/blob/master/img/Screen_3.png)
 
 * If you have chosen the supervised learning, you have to select the feature to predict :
@@ -56,6 +56,7 @@ The algorithms implemented are the followings :
 * Locally Linear Embedding
 * Multi-dimensional Scaling (MDS)
 * Isomap  
+
 To understand better these algorithms, __click on this [link](https://scikit-learn.org/stable/modules/manifold.html)__
 
 ![Screen6](https://github.com/pierre-vignoles/auto_ml_outliers/blob/master/img/Screen_6.png)
